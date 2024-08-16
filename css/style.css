@@ -38,7 +38,14 @@ button,a{
 }
 .repair__slider{
     width: 320px;
-    overflow: hidden;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    cursor: -webkit-grab; 
+    cursor:-moz-grab;
+}
+.repair__slider::-webkit-scrollbar{
+    display: none;
 }
 .repair__items{
     position: relative;
@@ -101,6 +108,7 @@ button,a{
     .repair__slider{
         width: 100%;
         overflow: visible;
+        cursor: auto; 
     }
     .repair__items{
         flex-wrap: wrap;
